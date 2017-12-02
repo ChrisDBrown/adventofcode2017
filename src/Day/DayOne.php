@@ -6,28 +6,24 @@ namespace App\Day;
 class DayOne implements DayInterface
 {
     /**
-     * string
+     * array
      */
     private $input;
 
     public function __construct(string $input, bool $isFilePath = true)
     {
-        if ($isFilePath) {
-            $this->input = file_get_contents($input);
-        } else {
-            $this->input = $input;
-        }
+        if ($isFilePath) $input = file_get_contents($input);
+
+        $this->input = str_split($input);
     }
 
-    public function partOne()
+    public function partOne(): int
     {
-        $inputArray = str_split($this->input);
-
-        $firstChar = array_shift($inputArray);
+        $firstChar = array_shift($this->input);
         $previousChar = $firstChar;
         $total = 0;
 
-        foreach ($inputArray as $currentChar) {
+        foreach ($this->input as $currentChar) {
             if ($currentChar == $previousChar) {
                 $total += $currentChar;
             }
@@ -41,11 +37,9 @@ class DayOne implements DayInterface
         return $total;
     }
 
-    public function partTwo()
+    public function partTwo(): int
     {
-        $inputArray = str_split($this->input);
-
-        $sets = array_chunk($inputArray, count($inputArray) / 2);
+        $sets = array_chunk($this->input, count($this->input) / 2);
         $total = 0;
 
         for ($i = 0; $i < count($sets[0]); $i++) {
