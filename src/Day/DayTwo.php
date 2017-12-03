@@ -6,7 +6,7 @@ namespace App\Day;
 class DayTwo implements DayInterface
 {
     /**
-     * array
+     * @var array
      */
     private $sets;
 

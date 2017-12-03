@@ -6,7 +6,7 @@ namespace App\Day;
 class DayOne implements DayInterface
 {
     /**
-     * array
+     * @var array
      */
     private $input;
 
