@@ -39,3 +39,8 @@ services:
         class: App\Day\DayThree
         public: true
         arguments: [289326]
+
+    day_four:
+        class: App\Day\DayFour
+        public: true
+        arguments: ['%kernel.root_dir%/../public/input/four.txt']
