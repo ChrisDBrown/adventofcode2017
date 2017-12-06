@@ -48,6 +48,6 @@ class DayThree implements DayInterface
 
     public function partTwo()
     {
-        // TODO: Implement partTwo() method.
+        // still no idea
     }
 }

@@ -25,6 +25,17 @@ class DayThreeTest extends TestCase
 
     public function testPartTwo()
     {
+        $this->markTestSkipped('No answer yet');
+        $dayThree = new DayThree(20);
+        $this->assertEquals(23, $dayThree->partTwo());
 
+        $dayThree = new DayThree(800);
+        $this->assertEquals(806, $dayThree->partTwo());
+
+        $dayThree = new DayThree(2000);
+        $this->assertEquals(2105, $dayThree->partTwo());
+
+        $dayThree = new DayThree(6000);
+        $this->assertEquals(6155, $dayThree->partTwo());
     }
 }
