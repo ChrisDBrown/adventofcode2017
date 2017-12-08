@@ -49,3 +49,8 @@ services:
         class: App\Day\DayFive
         public: true
         arguments: ['%kernel.root_dir%/../public/input/five.txt']
+
+    day_six:
+        class: App\Day\DaySix
+        public: true
+        arguments: [[4,10,4,1,8,4,9,14,5,1,14,15,0,15,3,5]]
